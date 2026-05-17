@@ -1,0 +1,32 @@
+{
+  "name": "trabalho3-medallion",
+  "tasks": [
+    {
+      "task_key": "01_extract_landing",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Repos/<user>/Trabalho-LAKEHOUSE-COM-DATABRICKS-FREE-EDITION-E-ARQUITETURA-MEDALHAO/notebooks/01_extract_landing"
+      }
+    },
+    {
+      "task_key": "02_landing_to_bronze",
+      "depends_on": [{ "task_key": "01_extract_landing" }],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Repos/<user>/Trabalho-LAKEHOUSE-COM-DATABRICKS-FREE-EDITION-E-ARQUITETURA-MEDALHAO/notebooks/02_landing_to_bronze"
+      }
+    },
+    {
+      "task_key": "03_bronze_to_silver",
+      "depends_on": [{ "task_key": "02_landing_to_bronze" }],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Repos/<user>/Trabalho-LAKEHOUSE-COM-DATABRICKS-FREE-EDITION-E-ARQUITETURA-MEDALHAO/notebooks/03_bronze_to_silver"
+      }
+    },
+    {
+      "task_key": "04_silver_to_gold",
+      "depends_on": [{ "task_key": "03_bronze_to_silver" }],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Repos/<user>/Trabalho-LAKEHOUSE-COM-DATABRICKS-FREE-EDITION-E-ARQUITETURA-MEDALHAO/notebooks/04_silver_to_gold"
+      }
+    }
+  ]
+}

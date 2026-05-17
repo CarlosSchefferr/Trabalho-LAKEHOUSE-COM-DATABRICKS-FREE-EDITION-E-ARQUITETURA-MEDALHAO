@@ -1,0 +1,6 @@
+site_name: Trabalho 3 - Lakehouse Databricks
+nav:
+  - Home: index.md
+  - Arquitetura: arquitetura.md
+theme:
+  name: material
